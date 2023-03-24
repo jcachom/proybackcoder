@@ -1,0 +1,36 @@
+<div id="listp">
+      Código<input id="txtcodigo" type="text">  
+      Title <input id="txttitle" type="text">  
+      Descripción<input id="txtdescripcion" type="text">  
+      Price<input id="txtprice" type="text">  
+      Stock<input id="txtstock" type="text">
+      <button id="btnadicionar">Adicionar</button>
+     
+</div>
+ <br>  
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./socket.io/socket.io.js"></script>
+ <link rel="stylesheet" href="css/index.css">  
+ <script src="/js/realTimeProducts.js"></script> 
+
+<div id="divlist">
+ 
+  
+    {{#each productos }}
+
+             <div  class="tarjeta">
+              <br>
+              id :{{ this.id }} <br>
+              code : {{ this.code }} <br>
+              description : {{ this.description }} <br>
+              price : {{ this.price }} <br>
+              stock : {{ this.stock }} <br>        
+             </div>
+              <br>                  
+   {{/each}}
+
+ 
+
+</div>
+
+ 
